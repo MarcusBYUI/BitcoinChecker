@@ -1,0 +1,68 @@
+<FloatLayout>
+
+
+    input_name: coin_name
+
+    Label:
+        text: "Crypto Coin Checker"
+        pos_hint: {"x": 0.4,"top": 0.98}
+        size_hint: 0.2, 0.1
+        font_size: 30
+
+
+    Label:
+        text: "Enter Coin Name (e.g bitcoin): "
+        pos_hint: {"x": 0.25,"top": 0.825}
+        size_hint: 0.2, 0.1
+
+
+    TextInput:
+        id: coin_name
+        multiline: False
+        size_hint: 0.2, 0.05
+        pos_hint: {"x": 0.5,"top": 0.8}
+
+    Button:
+        id: btn
+        text: root.check_state
+        background_color: "green"
+        color: "yellow"
+        on_press: root.change_label()
+        on_release: root.check_coin()
+        pos_hint: {"x": 0.35,"top": 0.7}
+        size_hint: 0.2, 0.05
+
+    Label:
+        text: root.coin_name
+        pos_hint: {"x": 0.25,"top": 0.6}
+        size_hint: 0.2, 0.05
+    Label:
+        text: root.coin_price
+        pos_hint: {"x": 0.5,"top": 0.6}
+        size_hint: 0.2, 0.05
+    Label:
+        text: root.coin_mcap
+        pos_hint: {"x": 0.35,"top": 0.5}
+        size_hint: 0.2, 0.05
+    Label:
+        text: root.coin_advice
+        color: "green"
+        pos_hint: {"x": 0.4,"top": 0.4}
+        size_hint: 0.2, 0.05
+
+    Label:
+        text: root.coin_warning
+        color: "red"
+        pos_hint: {"x": 0.35,"top": 0.4}
+        size_hint: 0.2, 0.05
+
+    Label:
+        text: "Created By Marcus Ojo-Osasere"
+        pos_hint: {"x": 0.4,"top": 0.2}
+        size_hint: 0.2, 0.05
+        font_size: 20
+
+    Label:
+        text: "Platform makes use of the coingecko API so any coin not listed coingecko can't be found here"
+        pos_hint: {"x": 0.35,"top": 0.1}
+        size_hint: 0.35, 0.05
